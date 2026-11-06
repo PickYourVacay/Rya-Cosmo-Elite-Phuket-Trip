@@ -78,6 +78,9 @@ em.hl{font-style:normal;color:var(--pink)}
 .rya small{display:block;font-family:var(--f-mono);font-weight:500;font-size:.58rem;letter-spacing:.22em;color:var(--pink)}
 .rya-logo{display:block;width:auto;aspect-ratio:1;object-fit:cover;border-radius:8px}
 .cobrand .rya-logo{height:76px}
+.gate-card .organiser{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;margin-top:16px}
+.gate-card .organiser span{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)}
+.gate-card .organiser img{height:58px;width:auto;display:block}
 .cobrand .rya small{margin-top:4px}
 .topbar .rya-logo{height:38px;border-radius:6px}
 .sponsor-tag{position:relative}
@@ -346,6 +349,14 @@ footer .logo-chip img{height:40px;width:auto;display:block}
   .fact dd{font-size:1rem}
   .transit .head{flex-direction:column;gap:4px}
   .transit h3{font-size:1.3rem}
+  /* route maps: fit the screen width, no sideways scrolling */
+  .transit-svg{overflow:visible;margin-top:24px}
+  .transit-svg svg{min-width:0;overflow:visible}
+  .transit-svg text{font-size:28px;letter-spacing:1px}
+  .transit-svg circle{r:11px}
+  .transit-svg .tp{stroke-width:4;stroke-dasharray:12 14}
+  .transit-svg .tp-done{stroke-width:6}
+  .transit-svg .veh>g,.transit-svg .veh2>g{scale:1.6}
   .day-head{grid-template-columns:minmax(0,1fr);gap:6px;align-items:start}
   .day-num{font-size:3rem;display:flex;align-items:baseline;gap:8px}
   .day-num small{display:inline;margin:0}
@@ -372,6 +383,8 @@ footer .logo-chip img{height:40px;width:auto;display:block}
   .cobrand{margin-bottom:6px}
   .cobrand img{height:28px}
   .cobrand .rya-logo{height:36px}
+  .gate-card .organiser{margin-top:8px}
+  .gate-card .organiser img{height:28px}
   .gate-card h1{font-size:1.7rem}
   .gate-card .meta{margin-top:8px;padding-top:8px}
   .gate-card .scroll{margin-top:8px}
