@@ -41,7 +41,7 @@ D.forEach(function(d){
   var meals=['L','D'].map(function(m){return '<span class="meal'+(d.meals.indexOf(m)>-1?' on':'')+'">'+mealNames[m]+'</span>'}).join('');
   html+='<article class="day" id="day'+d.n+'" data-day="'+d.n+'" data-place="'+d.place+'">'+
    '<div class="day-head rv"><div class="day-num"><small>DAY</small>0'+d.n+'</div><div><div class="place">'+d.place+'<span class="date">'+d.date+'</span></div><h2>'+d.t+'</h2></div></div>'+
-   '<div class="day-body"><figure class="postcard rv" aria-hidden="true"><img src="'+d.n+'.png" alt="" loading="lazy"><span class="stamp" lang="th">'+d.th+'<small>DAY '+d.n+'</small></span></figure>'+
+   '<div class="day-body"><figure class="postcard rv" aria-hidden="true"><img src="'+(d.img||'Day%20'+d.n+'.png')+'" alt="" loading="lazy"><span class="stamp" lang="th">'+d.th+'<small>DAY '+d.n+'</small></span></figure>'+
    '<div><p class="day-lede">'+d.lede+'</p><ul class="acts">'+acts+'</ul><div class="day-foot"><div class="meals" aria-label="Meals included">'+meals+'</div>'+(d.stay?'<div class="stay">Tonight: <b>'+d.stay+'</b></div>':'<div class="stay">Fly home</div>')+'</div></div></div></article>';
 });
 var days=document.getElementById('days');

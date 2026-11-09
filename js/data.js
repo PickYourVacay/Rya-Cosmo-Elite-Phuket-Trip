@@ -38,11 +38,11 @@ window.D=[
         ['Afternoon','At your own pace','The pool and beach at ARKbar, a Thai massage, or a walk along Chaweng. Spa and activities are at your own cost.'],
         ['Evening','Pure veg dinner','The last dinner of the trip together.']],
   meals:'LD',stay:'ARKbar Beach Resort, Koh Samui'},
- {n:5,th:'๕',place:'Koh Samui → Bangkok → Chennai',date:'Thu 26 Nov',t:'Laa gon, <em>Thailand.</em>',lede:'One last lunch on the island, a business-class hop to Bangkok, and the late flight home.',scene:'depart',
+ {n:5,th:'๕',place:'Koh Samui → Bangkok → Chennai',date:'Thu 26 Nov',t:'Laa gon, <em>Thailand.</em>',lede:'One last lunch on the island, a short hop to Bangkok, and the late flight home.',scene:'depart',
   acts:[['Morning','Check out','Pack up and check out of ARKbar. Bags can be held at the resort.'],
         ['Lunch','Pure veg lunch','The last included meal of the trip.'],
         ['14:30','Transfer to Samui Airport','Private transfer to USM, two hours before the flight.'],
-        ['16:30','PG 154 to Bangkok','Bangkok Airways, business class, landing at Suvarnabhumi at 17:45. Collect your bags.'],
+        ['16:30','PG 154 to Bangkok','Bangkok Airways, economy class, landing at Suvarnabhumi at 17:45. Collect your bags.'],
         ['23:45','TG 359 to Chennai','Check in again at Thai Airways, have dinner at the airport, and land in Chennai T2 at 01:50 on Friday.']],
   meals:'L',stay:null}
 ];
