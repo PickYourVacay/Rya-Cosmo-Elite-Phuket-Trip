@@ -41,11 +41,18 @@ D.forEach(function(d){
   var meals=['L','D'].map(function(m){return '<span class="meal'+(d.meals.indexOf(m)>-1?' on':'')+'">'+mealNames[m]+'</span>'}).join('');
   html+='<article class="day" id="day'+d.n+'" data-day="'+d.n+'" data-place="'+d.place+'">'+
    '<div class="day-head rv"><div class="day-num"><small>DAY</small>0'+d.n+'</div><div><div class="place">'+d.place+'<span class="date">'+d.date+'</span></div><h2>'+d.t+'</h2></div></div>'+
-   '<div class="day-body"><figure class="postcard rv" aria-hidden="true"><img src="'+(d.img||'Day%20'+d.n+'.png')+'" alt="" loading="lazy"><span class="stamp" lang="th">'+d.th+'<small>DAY '+d.n+'</small></span></figure>'+
+   '<div class="day-body"><figure class="postcard rv" aria-hidden="true"><img class="day-photo" data-base="'+(d.img||'Day%20'+d.n)+'" alt="" loading="lazy"><span class="stamp" lang="th">'+d.th+'<small>DAY '+d.n+'</small></span></figure>'+
    '<div><p class="day-lede">'+d.lede+'</p><ul class="acts">'+acts+'</ul><div class="day-foot"><div class="meals" aria-label="Meals included">'+meals+'</div>'+(d.stay?'<div class="stay">Tonight: <b>'+d.stay+'</b></div>':'<div class="stay">Fly home</div>')+'</div></div></div></article>';
 });
 var days=document.getElementById('days');
 days.innerHTML='<div class="days-sub">'+html+'</div>';
+/* day photos: "Day 2.png", "Day 2.jpeg", "Day 2.jpg" or "Day 2.webp" all work */
+days.querySelectorAll('img.day-photo').forEach(function(img){
+  var exts=['png','jpeg','jpg','webp','PNG','JPEG','JPG'],i=0,base=img.getAttribute('data-base');
+  if(/\.[a-z]+$/i.test(base)){img.src=base;return}
+  img.addEventListener('error',function(){if(++i<exts.length)img.src=base+'.'+exts[i]});
+  img.src=base+'.'+exts[0];
+});
 (function(){
   var journey=document.getElementById('journey'),inner=journey.querySelector('.journey-inner'),rail=inner.querySelector('.rail');
   var parts=Array.prototype.slice.call(days.children);
